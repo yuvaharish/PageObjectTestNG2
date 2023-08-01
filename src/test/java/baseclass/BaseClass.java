@@ -18,10 +18,12 @@ public class BaseClass {
 public static WebDriver driver;
 	
 	public static void browserLaunch() {
-		//System.setProperty("webdriver.chrome.driver","C:\\Users\\jacki\\eclipse-workspace\\Shoban\\SeleniumTest\\Driver\\chromedriver.exe");
 		ChromeOptions option=new ChromeOptions();
 		option.setHeadless(true);
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\jacki\\git\\pageObjectTestNG\\PageObjectModuel\\Driver\\chromedriver.exe");
+		
+		//WebDriverManager.chromedriver().setup();
+		
 		driver= new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
