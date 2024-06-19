@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import baseclass.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageFactory.LoginPage;
+import java.lang.Thread;
 
 public class ExecuationClass {
 	
@@ -22,6 +23,7 @@ public class ExecuationClass {
 		BaseClass.browserLaunch();
 		LoginPage lo = new LoginPage();
 		lo.url(lo.pro("site"));
+		 Thread.sleep(3000)
 		lo.typeText(lo.getUserName(), lo.pro("userName"));
 		lo.typeText(lo.getPassWord(), lo.pro("passWord"));
 		lo.elementClick(lo.getLoginBtn());
